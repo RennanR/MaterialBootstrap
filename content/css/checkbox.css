@@ -1,0 +1,61 @@
+input[type="checkbox"]{
+    margin: 20px;
+}
+
+.check-effect {
+    position: relative;
+    top: 0;
+    cursor: pointer;
+    display: inline-block;
+}
+
+    .check-effect:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        z-index: 1;
+        width: 24px;
+        height: 24px;
+        border: 2px solid #6d6d6d;
+    }
+
+    .check-effect:checked:before {
+        width: 24px;
+        height: 24px;
+        border-color: #4caf50;
+        background-color: #4caf50;
+        border-width: 3px; 
+    }
+    .check-effect:checked:after {
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg);
+        position: absolute;
+        left: 7px;
+        display: table;
+        width: 10px;
+        height: 20px;
+        border: 2px solid #ffffff;
+        border-top: 0;
+        border-left: 0;
+        content: ' ';
+        z-index: 1;
+        background: transparent;
+    }
+
+
+    .check-effect:after {
+        content: "";
+        position: absolute;
+        top: -0.125rem;
+        left: 0;
+        width: 20px;
+        height: 20px;
+        background: #ffffff;
+        cursor: pointer;
+        
+    }
+
+    .check-effect:disabled:before {
+        border-color: #aaaaaa;
+        background-color: #cccccc;
+    }

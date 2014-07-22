@@ -1,0 +1,86 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Material Design + Bootstrap</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="UTF-8">
+
+    <!-- Bootstrap core CSS -->
+    <link href="content/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Bootstrap core CSS -->
+    <link href="content/font/font-awesome.css" rel="stylesheet">
+    <link href="content/font/font-roboto/font-roboto.css" rel="stylesheet">
+
+    <!-- MEU CSS-->
+    <link href="content/css/style.css" rel="stylesheet">
+    <link href="content/css/cards.css" rel="stylesheet">
+    <link href="content/css/button.css" rel="stylesheet">
+    
+    <!-- ZERA ESPAÇAMENTO CSS-->
+    <link href="content/css/zero.css" rel="stylesheet">
+</head>
+<style>
+    section .card{
+        height: 200px;
+        text-align: center;
+    }
+    section .card-description{
+        height: 100px;
+        text-align: left;
+        
+    }
+</style>
+<body>
+    <div class="card navbar navbar-fixed-top no-margin" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <div class="navbar-brand"><small>Material Design + Bootstrap</small></div>
+            </div>
+            <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="button.html">Button</a></li>
+                    <li><a href="cards.html">Cards</a></li>
+                    <li><a href="form.html">Form</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <section class="container"> 
+        <div class="col-xs-12 col-md-4">
+            <div class="card">
+                <div class="card-description">
+                    <label>Circular button,</label><small> Botão de ação flutuante, um botão circular de papel que levanta e emite reações de tinta quando pressionado.</small>
+                </div>
+                <button inky raised class="btn-circular btn-primary white"><i class="fa fa-plus"></i></button>
+            </div>
+        </div>
+        <div class="col-xs-12 col-md-4">
+            <div class="card">
+                <div class=" card-description">
+                    <label>Raised button,</label><small> Botão normalmente retangular feito de papel que levanta e emite reações de tinta quando pressionado.</small>
+                </div>
+                <button inky raised class="btn btn-primary">Button</button>
+            </div>
+        </div>
+        <div class="col-xs-12 col-md-4">
+            <div class="card">
+                <div class=" card-description">
+                    <label>Flat button,</label><small> Botão feito de tinta que emite reações de tinta quando pressionado, mas não levanta.</small>
+                </div>
+                <button inky class="btn-flat btn-primary">Button</button>
+            </div>
+        </div>        
+    </section>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/button-effect.js"></script>
+</body>
+</html>
