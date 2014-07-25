@@ -1,6 +1,9 @@
 *:focus {
     outline: none !important;
 }
+*:hover {
+    text-decoration: none !important;
+}
 
 /*----------------------------0 margin and padding----------------------------*/
 .no-margin {

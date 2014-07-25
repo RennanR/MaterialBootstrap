@@ -3,6 +3,12 @@
   position:relative; 
   margin-bottom:45px; 
 }
+
+textarea{
+    resize: none;
+    min-height: 100px;
+}
+
 input[type="text"], 
 input[type="email"], 
 input[type="password"], 
@@ -13,7 +19,9 @@ textarea{
   width:100%;
   border:none;
   border-bottom:1px solid #757575;
+  
 }
+
 input[type="text"]:focus, 
 input[type="email"]:focus, 
 input[type="password"]:focus, 
