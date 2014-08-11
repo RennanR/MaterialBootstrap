@@ -7,10 +7,44 @@ html, body {
     background-color: #f2f2f2;
     padding-top: 55px; /*determina o espaço que o conteúdo terá da navbar*/
 }
+
+/*-----------------navbar resize-----------------*/
 .navbar{
-    background-color: #3f51b5;
+    background-color: transparent;
     color: #ffffff;
+    box-shadow: none;
+    padding: 10px 0;
+    -webkit-transition: box-shadow .05s ease-in-out, background-color .1s ease-in-out;
+    -moz-transition: box-shadow .05s ease-in-out, background-color .1s ease-in-out;
+    transition: box-shadow .05s ease-in-out, background-color .1s ease-in-out;
 }
+
+.navbar-fixed-top {
+    border: none;
+}
+
+.navbar-fixed-collapse {
+    background-color: #3f51b5;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.26);
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 192px;
+    background: #3f51b5;
+    -webkit-transition: height .1s ease-in-out;
+    -moz-transition: height .1s ease-in-out;
+    transition: height .1s ease-in-out;    
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.header-collapse {
+    height: 60px;
+}
+/*-----------------end navbar resize-----------------*/
 
 .navbar a, .navbar button, .navbar button:hover{
     color: #ffffff;
@@ -18,6 +52,15 @@ html, body {
 
 .navbar-nav > li > a:hover{
     background-color: rgba(0,0,0,0.05);
+}
+
+section.container {
+    z-index: 100;
+    top: 64px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
 }
 
 .form{
