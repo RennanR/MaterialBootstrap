@@ -1,51 +1,67 @@
-input[type="radio"]{
-    margin: 20px;
+input[type="radio"] {
+    display: inline-block;
 }
 
-.radio {
-    position: relative;
-    top: 0;    
-    display: inline-block;
+.radio-effect {
+    margin-right: 20px;
     cursor: pointer;
+    font-weight: normal;
+}
+
+    .radio-effect:hover .inner {
+        -webkit-transform: scale(0.5);
+        -ms-transform: scale(0.5);
+        transform: scale(0.5);
+        opacity: 0;
     }
 
-    .radio:before {
-        content: "";
-        position: absolute;
-        left: 0;
-        z-index: 1;
-        width: 24px;
-        height: 24px;
-        border: 2px solid #6d6d6d;
-        border-radius: 50%;
-        padding: 2px;
-        color: #4caf50; 
+    .radio-effect input {
+        width: 1px;
+        height: 1px;
+        opacity: 0;
     }
 
-    .radio:checked:before {
-        width: 24px;
-        height: 24px;
-        border: 2px solid #4caf50;
-        color: #4caf50;
-        background-color: #ffffff;
-        border-radius: 50%;
-        font-family: 'FontAwesome';
-        content: "\f111";
-        font-size: 17px;
-        
-    }
+        .radio-effect input:checked + .outer .inner {
+            -webkit-transform: scale(1);
+            -ms-transform: scale(1);
+            transform: scale(1);
+            opacity: 1;
+        }
 
-    .radio:after {
-        content: "";
-        position: absolute;
-        top: -0.125rem;
-        left: 0;
+        .radio-effect input:checked + .outer {
+            border: 2px solid #5cb85c;
+        }
+
+        .radio-effect input:focus + .outer .inner {
+            -webkit-transform: scale(1);
+            -ms-transform: scale(1);
+            transform: scale(1);
+            opacity: 1;
+            background-color: #5cb85c;
+        }
+
+    .radio-effect .outer {
         width: 20px;
         height: 20px;
-        background: #ffffff;
-        cursor: pointer;        
+        display: block;
+        float: left;
+        margin: 0px 5px 10px 10px;
+        border: 2px solid #333333;
+        border-radius: 50%;
+        background-color: #fff;
     }
-    .radio:disabled:before {
-        border-color: #aaaaaa;
-        background-color: #cccccc;
+
+    .radio-effect .inner {
+        -webkit-transition: all 0.25s ease-in-out;
+        transition: all 0.25s ease-in-out;
+        width: 12px;
+        height: 12px;
+        -webkit-transform: scale(0);
+        -ms-transform: scale(0);
+        transform: scale(0);
+        display: block;
+        margin: 2px;
+        border-radius: 50%;
+        background-color: #5cb85c;
+        opacity: 0;
     }

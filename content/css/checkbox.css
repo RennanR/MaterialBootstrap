@@ -1,61 +1,79 @@
-input[type="checkbox"]{
-    margin: 20px;
+input[type="checkbox"] {
+    display: inline-block;
+    margin-right: 15px;
 }
 
 .check-effect {
     position: relative;
-    top: 0;
     cursor: pointer;
-    display: inline-block;
+    font-weight: normal;
+    margin-right: 20px;
 }
 
-    .check-effect:before {
+.check {
+    position: relative;
+    top: -0.375rem;
+    margin: 0 1rem 0 0;
+    cursor: pointer;
+}
+
+    .check:before {
+        -webkit-transition: all 0.3s ease-in-out;
+        -moz-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
         content: "";
         position: absolute;
         left: 0;
         z-index: 1;
-        width: 24px;
-        height: 24px;
-        border: 2px solid #6d6d6d;
-    }
-
-    .check-effect:checked:before {
-        width: 24px;
-        height: 24px;
-        border-color: #4caf50;
-        background-color: #4caf50;
-        border-width: 3px; 
-    }
-    .check-effect:checked:after {
-        -webkit-transform: rotate(45deg);
-        transform: rotate(45deg);
-        position: absolute;
-        left: 7px;
-        display: table;
-        width: 10px;
+        width: 20px;
         height: 20px;
-        border: 2px solid #ffffff;
-        border-top: 0;
-        border-left: 0;
-        content: ' ';
-        z-index: 1;
-        background: transparent;
+        border: 2px solid #333333;
     }
 
+    .check:checked:before {
+        -webkit-transform: rotate(-45deg);
+        -moz-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+        -o-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+        height: .5rem;
+        border-color: #5cb85c;
+        border-top-style: none;
+        border-right-style: none;
+        margin-top: 7px;
+    }
 
-    .check-effect:after {
+    .check:after {
         content: "";
         position: absolute;
         top: -0.125rem;
         left: 0;
-        width: 20px;
-        height: 20px;
-        background: #ffffff;
+        width: 1.6rem;
+        height: 1.6rem;
+        background: #fff;
         cursor: pointer;
-        
     }
 
-    .check-effect:disabled:before {
-        border-color: #aaaaaa;
-        background-color: #cccccc;
+@-webkit-keyframes slideUp {
+    0% {
+        -webkit-transform: translateY(6.25rem);
+        transform: translateY(6.25rem);
     }
+
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideUp {
+    0% {
+        -webkit-transform: translateY(6.25rem);
+        transform: translateY(6.25rem);
+    }
+
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+}
