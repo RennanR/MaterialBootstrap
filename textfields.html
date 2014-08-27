@@ -47,7 +47,7 @@
         <div class="st-pusher">        
             <div class="st-content">
                 <div class="st-content-inner">
-                    <div id="st-trigger-effects" class="navbar navbar-fixed-top navbar-fix">
+                    <div id="st-trigger-effects" class="navbar navbar-fixed-top">
                         <div class="col-xs-4 col-sm-8 pull-left">
                             <button data-effect="st-effect-1" class="btn-flat btn-lg pull-left"><i class="fa fa-bars"></i></button>
                             <div class="title-page text-overflow pull-left hidden-xs col-sm-10">Material Design + Bootstrap</div>
@@ -65,24 +65,42 @@
                     <div class="header" style="background-image: url('content/images/banner.png');"></div>
                     <section class="container">  
                         <div class="card">
-                            <div class="col-xs-12 col-md-4">
-                                <div class="card-description">
-                                    <label>Circular button,</label><small> Botão de ação flutuante, um botão circular de papel que levanta e emite reações de tinta quando pressionado.</small>
+                            <form role="form" class="form">
+                                <div class="has-error input-effect-group">      
+                                    <input type="text">
+                                    <span class="highlight"></span>
+                                    <span class="bar"></span>
+                                    <label class="label-input">Name</label>
+                                    <div class="help-block">test has-error with help-block<i class="pull-right fa fa-warning"></i></div>
                                 </div>
-                                <button class="btn-circular btn-primary inky raised  white"><i class="fa fa-plus"></i></button>
-                            </div>
-                            <div class="col-xs-12 col-md-4">
-                                <div class=" card-description">
-                                    <label>Raised button,</label><small> Botão normalmente retangular feito de papel que levanta e emite reações de tinta quando pressionado.</small>
+                                <div class="input-effect-group">      
+                                    <input type="text">
+                                    <span class="highlight"></span>
+                                    <span class="bar"></span>
+                                    <label class="label-input">Username</label>
                                 </div>
-                                <button class="btn btn-primary inky raised">Button</button>
-                            </div>
-                            <div class="col-xs-12 col-md-4">
-                                <div class=" card-description">
-                                    <label>Flat button,</label><small> Botão feito de tinta que emite reações de tinta quando pressionado, mas não levanta.</small>
+                                <div class="input-effect-group">      
+                                    <input type="password">
+                                    <span class="highlight"></span>
+                                    <span class="bar"></span>
+                                    <label class="label-input">Password</label>
                                 </div>
-                                <button class="btn-flat btn-primary inky">Button</button>
-                            </div>        
+                                <div class="input-effect-group">      
+                                    <textarea></textarea>
+                                    <span class="highlight"></span>
+                                    <span class="bar"></span>
+                                    <label class="label-input">Textarea insira sua mensagem</label>
+                                </div>
+                                <div class="form-group">                    
+                                    <select id="Item" name="Item">
+                                        <option value="Select Item">Select Item</option>
+                                        <option value="Item 1">Item 1</option>
+                                        <option value="Item 2">Item 2</option>
+                                        <option value="Item 3">Item 3</option>
+                                        <option value="Item 4">Item 4</option>
+                                    </select>
+                                </div>
+                            </form>
                         </div>
                     </section>
                 </div>
@@ -106,6 +124,8 @@
 
         <script>
             new UISearch( document.getElementById( 'sb-search' ) );
+            
+            $("select").selectBoxIt();
         </script>
     </body>
 </html>

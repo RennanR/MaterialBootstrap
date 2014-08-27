@@ -54,71 +54,52 @@
 
 /*----------------------------------------------------*/
 
-.header-card .card-title{
-    font-size: 34px;
-    color: #ffffff;
-}
-.header-card  .card-description{
-    padding: 40px 15px 30px;
+.card-media-horizontal {
+    background-color: #fff;
 }
 
-.share-header-card {
+.card-media-horizontal > .card-side {
+    padding: 0;   
+    float: right;
+}
+
+.card-media-horizontal > .card-side .card-title {
+    font-size: 18px;
+    color: #333;
+    padding: 10px 15px;
+    font-weight: bold;
+}
+
+.card-media-horizontal > .card-side .card-description {
+    padding: 0 15px 11px;
+}
+
+.card-media-horizontal > .card-footer {
+    font-size: 18px;
+    padding: 15px;
+    font-family: 'robotobold';
+}
+
+.card-media-horizontal > .card-footer .card-footer-controler{
+    padding: 0;
+    background-color: #3f51b5;
+}
+
+.card-media-horizontal > .card-footer .card-footer-controler .btn-flat{
+    margin: 0;
+    padding: 15px;
+    font-size: 16px;
+    color: #fff;
+}
+
+.card-media-horizontal > .card-footer .card-footer-controler .btn-flat i{
+    margin-right: 5px;
+    font-size: 16px;
+}
+
+.card-media-horizontal > .card-footer .card-footer-controler .btn-circular{
     position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-}
-
-    .share-header-card:hover {
-        opacity: 1;
-        -webkit-transition: opacity 0.5s ease-in-out;
-        -moz-transition: opacity 0.5s ease-in-out;
-        -ms-transition: opacity 0.5s ease-in-out;
-        -o-transition: opacity 0.5s ease-in-out;
-        transition: opacity 0.5s ease-in-out;
-    }
-
-    .share-header-card a {
-        font-size: 24px;
-        color: rgba(255, 255, 255, 0.5);
-        margin: 15px 20px 0 0;
-        float: right;
-    }
-
-        .share-header-card a:hover {
-            color: white;
-        }
-
-
-@media (max-width: 1199px) {
-    .share-header-card {
-        opacity: 1;
-    }
-}
-
-@media (max-width: 991px) {
-    .header-card  .card-description{
-        padding: 15px;
-    }
-    .header-card .card-footer{
-        padding: 15px;
-    }
-}
-
-@media (max-width: 767px) {
-    .header-card .card-title {
-        position: relative;
-        background: #489efd;
-        margin: 0;
-        padding: 15px;
-        font-size: 24px;
-    }
-    
-    .share-header-card a {
-        font-size: 20px;
-        margin: 15px 15px 0 0;
-    }
-    
+    bottom: 25px;
+    right: 25px;
+    background-color: #fdd835;
 }

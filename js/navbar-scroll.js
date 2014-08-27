@@ -1,18 +1,19 @@
 (function () {
-    
+
     $(window).scroll(function () {
-
-        if ($(".header").offset().top > 50) {
-            $(".header-fixed-top").addClass("header-collapse");
-        } else {
-            $(".header-fixed-top").removeClass("header-collapse");
+        var opacity = (parseInt($(".navbar").offset().top)/100)
+        var opacityshadow = (parseInt($(".navbar").offset().top)/100)
+        if(opacityshadow > 0.20){
+            opacityshadow= 0.20;
         }
+        ///TODO: ALTERAR O RGB NO BACKGROUND-COLOR PARA A ESCOLHA NO MOMENTO DA CUSTOMIZAÇÃO.
+        $(".navbar").css({
+            'background-color': 'rgba(63,81,181,'+opacity+')',
+            'box-shadow': '0 2px 4px rgba(0, 0, 0, '+opacityshadow+')'
+        })
 
-        if ($(".navbar").offset().top > 50) {
-            $(".navbar-fixed-top").addClass("navbar-fixed-collapse");
-        } else {
-            $(".navbar-fixed-top").removeClass("navbar-fixed-collapse");
-        }	
+        $(".title-page").css('opacity', opacity);
+
     });
-
+    $(window).scroll();
 })();

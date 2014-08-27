@@ -1,6 +1,5 @@
 input[type="checkbox"] {
-    display: inline-block;
-    margin-right: 15px;
+    margin: 0 5px 0 0;
 }
 
 .check-effect {
@@ -11,69 +10,83 @@ input[type="checkbox"] {
 }
 
 .check {
+    border: 2px solid #333333;
+    -webkit-appearance: none;
+    appearance: none;
+    display: inline-block;
+    height: 1.6rem;
+    width: 1.6rem;
     position: relative;
-    top: -0.375rem;
-    margin: 0 1rem 0 0;
+}
+.check:before, .check:after {
+    position: absolute;
+    content: "";
+    border-radius: 2px;
+}
+.check:before {
+    transform-origin: left top;
+    transform: rotate(55deg);
+    height: .3rem;
+    bottom: .7rem;
+    left: .2rem;
+    width: 0.7rem;
+}
+.check:after {
+    transform-origin: left top;
+    transform: rotate(-52deg);
+    height: .3rem;
+    bottom: .1rem;
+    left: .4rem;
+    width: 1.2rem;
+}
+.check:checked {
+    background: #4caf50;
+    border: 2px solid #4caf50;
+}
+.check:checked:before, .check:checked:after {
+    background: white;
+    height: 3px;
+}
+.check:checked:before {
+    animation: checkbox-mask-left .15s ease-in-out;
+}
+.check:checked:after {
+    animation: checkbox-mask-right .15s ease-in-out;
+}
+.check:focus {
+    outline: 0;
+}
+
+.check, label {
+    display: inline-block;
+    vertical-align: middle;
+    font-family: Helvetica, sans-serif;
     cursor: pointer;
 }
 
-    .check:before {
-        -webkit-transition: all 0.3s ease-in-out;
-        -moz-transition: all 0.3s ease-in-out;
-        transition: all 0.3s ease-in-out;
-        content: "";
-        position: absolute;
-        left: 0;
-        z-index: 1;
-        width: 20px;
-        height: 20px;
-        border: 2px solid #333333;
-    }
-
-    .check:checked:before {
-        -webkit-transform: rotate(-45deg);
-        -moz-transform: rotate(-45deg);
-        -ms-transform: rotate(-45deg);
-        -o-transform: rotate(-45deg);
-        transform: rotate(-45deg);
-        height: .5rem;
-        border-color: #5cb85c;
-        border-top-style: none;
-        border-right-style: none;
-        margin-top: 7px;
-    }
-
-    .check:after {
-        content: "";
-        position: absolute;
-        top: -0.125rem;
-        left: 0;
-        width: 1.6rem;
-        height: 1.6rem;
-        background: #fff;
-        cursor: pointer;
-    }
-
-@-webkit-keyframes slideUp {
+@keyframes checkbox-mask-left {
     0% {
-        -webkit-transform: translateY(6.25rem);
-        transform: translateY(6.25rem);
+        width: 0;
+    }
+
+    50% {
+        width: 0.7rem;
     }
 
     100% {
-        -webkit-transform: translateY(0);
-        transform: translateY(0);
+        width: 0.7rem;
     }
 }
-
-@keyframes slideUp {
+@keyframes checkbox-mask-right {
     0% {
-        -webkit-transform: translateY(6.25rem);
-        transform: translateY(6.25rem);
+        width: 0;
+    }
+
+    50% {
+        width: 0;
     }
 
     100% {
-        -webkit-transform: translateY(0);
-        transform: translateY(0);
+        width: 1.2rem;
     }
 }

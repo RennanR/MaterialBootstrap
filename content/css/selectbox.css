@@ -237,8 +237,8 @@
 }
 
 .selectboxit-list > .selectboxit-focus > .selectboxit-option-anchor {
-  color: #ffffff;
-  background-color: #66afe9;
+  color: #333333;
+  background-color: #f2f2f2;
 }
 
 .selectboxit-list > .selectboxit-disabled > .selectboxit-option-anchor {

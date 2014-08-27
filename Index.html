@@ -1,53 +1,125 @@
 <html>
-<head>
-    <meta charset="utf-8">
-    <title>Material Design + Bootstrap</title>
+    <head>
+        <meta charset="utf-8">
+        <title>Media Center</title>
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="UTF-8">
 
-    <!-- Bootstrap core CSS -->
-    <link href="content/css/bootstrap.css" rel="stylesheet">
+        <!-- Bootstrap core CSS -->
+        <link href="content/css/bootstrap.css" rel="stylesheet">
 
-    <!-- Bootstrap core CSS -->
-    <link href="content/font/font-awesome.css" rel="stylesheet">
-    <link href="content/font/font-roboto/font-roboto.css" rel="stylesheet">
+        <!-- Fonts CSS -->
+        <link href="content/font/font-awesome.css" rel="stylesheet">
+        <link href="content/font/font-roboto/font-roboto.css" rel="stylesheet">
 
-    <!-- MEU CSS-->
-    <link href="content/css/style.css" rel="stylesheet">
-    <link href="content/css/sidebar.css" rel="stylesheet">
-    <link href="content/css/cards.css" rel="stylesheet">
-    <link href="content/css/button.css" rel="stylesheet">
-    
-    <!-- ZERA ESPAÇAMENTO CSS-->
-    <link href="content/css/zero.css" rel="stylesheet">
-    
-</head>
-<body id="st-container"> 
-    <nav class="st-menu st-effect-1">
-        <h2 class="icon icon-lab">Material Design + Bootstrap</h2>
-        <ul>
-            <li class="active"><a href="button.html">Button</a></li>
-            <li><a href="cards.html">Cards</a></li>
-            <li><a href="form.html">Form</a></li>
-            <li><a href="tabs.html">Tabs</a></li>
-        </ul>
-    </nav>
-    <div class="st-pusher">        
-        <div class="st-content">
-            <div class="st-content-inner">
-				<div class="header header-fixed-top"></div>
-                <div id="st-trigger-effects" class="navbar navbar-fixed-top no-margin">
-                    <button data-effect="st-effect-1" inky class="btn-flat overflow btn-lg"><i class="fa fa-bars"></i></button>
-                </div>                
-                <section class="container">                    
-                </section>
+        <!-- Material Design CSS-->        
+        <link href="content/css/button.css" rel="stylesheet"> 
+        <link href="content/css/cards.css" rel="stylesheet">
+        <link href="content/css/checkbox.css" rel="stylesheet">
+        <link href="content/css/input.css" rel="stylesheet">
+        <link href="content/css/radiobutton.css" rel="stylesheet">
+        <link href="content/css/selectbox.css" rel="stylesheet">
+        <link href="content/css/sidebar.css" rel="stylesheet">
+        <link href="content/css/tabs.css" rel="stylesheet"> 
+
+        <!-- MEU CSS-->
+        <link href="content/css/style.css" rel="stylesheet">
+        <link href="content/css/uisearch.css" rel="stylesheet">        
+
+        <!-- ZERA ESPAÇAMENTO CSS-->
+        <link href="content/css/zero.css" rel="stylesheet">
+
+    </head>
+    <body id="st-container"> 
+        <nav class="st-menu st-effect-1">
+            <h2 >
+                Material Design + Bootstrap
+            </h2>
+            <ul>
+                <li><a href="Index.html">Index</a></li>
+                <li><a href="button.html">Button</a></li>
+                <li><a href="cards.html">Cards</a></li>                
+                <li><a href="tabs.html">Tabs</a></li>
+                <li><a href="textfields.html">Text fields</a></li>
+                <li><a href="switches.html">Switches</a></li>
+            </ul>
+        </nav>
+        <div class="st-pusher">        
+            <div class="st-content">
+                <div class="st-content-inner">
+                    <div id="st-trigger-effects" class="navbar navbar-fixed-top">
+                        <div class="col-xs-4 col-sm-8 pull-left">
+                            <button data-effect="st-effect-1" class="btn-flat btn-lg pull-left"><i class="fa fa-bars"></i></button>
+                            <div class="title-page text-overflow pull-left hidden-xs col-sm-10">Material Design + Bootstrap</div>
+                        </div>
+                        <div class="col-xs-8 col-sm-4 pull-right">
+                            <div id="sb-search" class="sb-search">
+                                <form>
+                                    <input class="sb-search-input" placeholder="Search" type="text" value="" name="search" id="search">
+                                    <input class="sb-search-submit" type="submit" value="">
+                                    <span class="sb-icon-search"></span>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="header" style="background-image: url('content/images/banner.png');"></div>
+                    <section class="container">  
+                        <div class="card" style="min-height: 1000px;">
+                            <div class="ordenacao col-xs-12">
+                                <div class="col-xs-6 no-padding">
+                                    <ul class="drop-header pull-left">
+                                        <li class="dropdown">
+                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Período <span class="caret"></span></a>
+                                            <ul class="dropdown-menu" role="menu">
+                                                <li><a href="#">Todos</a></li>
+                                                <li><a href="#">Ontem</a></li>
+                                                <li><a href="#">Esta semana</a></li>
+                                                <li><a href="#">Semana passada</a></li>
+                                                <li><a href="#">Próxima semana</a></li>
+                                                <li><a href="#">Este mês</a></li>
+                                                <li><a href="#">Mês passado</a></li>
+                                                <li><a href="#">Próximo mês</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-xs-6 no-padding">
+                                    <ul class="drop-header pull-right">
+                                        <li class="dropdown">
+                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Tipo <span class="caret"></span></a>
+                                            <ul class="dropdown-menu pull-right" role="menu">
+                                                <li><a href="#">Todos</a></li>
+                                                <li><a href="#">Ao vivo</a></li>
+                                                <li><a href="#">Sob demanda</a></li>
+                                                <li><a href="#">Agendados</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div> 
+                        </div>
+                    </section>
+                </div>
             </div>
         </div>
-    </div>
-    <script src="js/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-	<script src="js/navbar-scroll.js"></script>
-    <script src="js/sidebar-effect.js"></script>    
-    <script src="js/button-effect.js"></script>
-</body>
+        <script src="js/jquery.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+
+        <script src="js/modernizr.custom.js"></script>
+        <script src="js/classie.js"></script>
+        <script src="js/uisearch.js"></script>
+        <script src="js/jquery-ui.min.js"></script> 
+
+        <!-- Material Design js-->
+        <script src="js/input-effect.js"></script>
+        <script src="js/navbar-scroll.js"></script>
+        <script src="js/sidebar-effect.js"></script>    
+        <script src="js/button-effect.js"></script>
+        <script src="js/selectbox.js"></script>
+        <script src="js/tabs.js"></script>
+
+        <script>
+            new UISearch( document.getElementById( 'sb-search' ) );
+        </script>
+    </body>
 </html>

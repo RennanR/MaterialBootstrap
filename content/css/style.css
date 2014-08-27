@@ -5,7 +5,12 @@ html, body {
     font-size: 14px;
     color: #333333;
     background-color: #f2f2f2;
-    padding-top: 55px; /*determina o espaço que o conteúdo terá da navbar*/
+}
+
+.text-overflow{
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
 }
 
 /*-----------------navbar resize-----------------*/
@@ -14,36 +19,37 @@ html, body {
     color: #ffffff;
     box-shadow: none;
     padding: 10px 0;
-    -webkit-transition: box-shadow .05s ease-in-out, background-color .1s ease-in-out;
-    -moz-transition: box-shadow .05s ease-in-out, background-color .1s ease-in-out;
-    transition: box-shadow .05s ease-in-out, background-color .1s ease-in-out;
+
+    -webkit-transition: box-shadow .05s ease-in-out, background-color .2s ease-in-out;
+    -moz-transition: box-shadow .05s ease-in-out, background-color .2s ease-in-out;
+    transition: box-shadow .05s ease-in-out, background-color .2s ease-in-out;
 }
 
 .navbar-fixed-top {
     border: none;
 }
 
-.navbar-fixed-collapse {
-    background-color: #3f51b5;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.26);
-}
-
 .header {
-    position: fixed;
-    top: 0;
+    position: relative;
     width: 100%;
     height: 192px;
-    background: #3f51b5;
-    -webkit-transition: height .1s ease-in-out;
-    -moz-transition: height .1s ease-in-out;
-    transition: height .1s ease-in-out;    
+    background-color: rgba(63,81,181,1);
     background-size: cover;
     background-repeat: no-repeat;
 }
 
-.header-collapse {
-    height: 60px;
+.title-page{
+    font-size: 24px;
+    line-height: 1.95;
+    margin: 0;
+    padding: 0;
+    opacity: 0;
+    
+    -webkit-transition: display .1s ease-in-out;
+    -moz-transition: display .1s ease-in-out;
+    transition: display .1s ease-in-out;
 }
+
 /*-----------------end navbar resize-----------------*/
 
 .navbar a, .navbar button, .navbar button:hover{
@@ -54,13 +60,44 @@ html, body {
     background-color: rgba(0,0,0,0.05);
 }
 
+.navbar-nav > li.dropdown > a,
+.navbar-nav > li.dropdown > a:hover,
+.navbar-nav > li.dropdown > a:focus{
+    background-color: transparent;
+    color: #333;
+}
+
+.navbar-nav > li > .dropdown-menu{
+    margin-top: -10px;
+}
+
+.ordenacao{
+    border-bottom: 1px solid #eee;
+    margin-bottom: 15px;
+}
+
+@media(max-width: 767px){
+    .ordenacao{
+        padding: 0;
+    }
+}
+
+
 section.container {
     z-index: 100;
     top: 64px;
     position: absolute;
-    top: 0;
     left: 0;
     right: 0;
+}
+
+.drop-header{
+    margin: 0;
+    padding: 15px;
+}
+
+.drop-header .dropdown-toggle{
+    color: #333;
 }
 
 .form{

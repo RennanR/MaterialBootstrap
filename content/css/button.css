@@ -1,4 +1,4 @@
-[inky] {
+.inky {
   position: relative;
   display: inline-block;
   overflow: hidden;
@@ -16,24 +16,24 @@
   transition: box-shadow .2s;
   cursor: pointer;
 }
-[inky] .touch {
+.inky .touch {
   background: rgba(0, 0, 0, 0.1);
   pointer-events: none;
   border-radius: 100%;
 }
-[inky].white .touch {
+.inky.white .touch {
   background: rgba(255, 255, 255, 0.2);
 }
-[inky].blue .touch {
+.inky.blue .touch {
   background: rgba(0, 0, 255, 0.2);
 }
-[inky].red .touch {
+.inky.red .touch {
   background: rgba(255, 0, 0, 0.2);
 }
-[inky].green .touch {
+.inky.green .touch {
   background: rgba(0, 255, 0, 0.2);
 }
-[inky].star .touch {
+.inky.star .touch {
   border-radius: 0;
   background: none;
   background-image: url("http://img3.wikia.nocookie.net/__cb20140518063015/vocaloid/images/d/de/Star_icon.svg");
@@ -42,7 +42,7 @@
   background-repeat: no-repeat;
   opacity: .5;
 }
-[inky].heart .touch {
+.inky.heart .touch {
   border-radius: 0;
   background: none;
   background-image: url("http://upload.wikimedia.org/wikipedia/commons/4/42/Love_Heart_SVG.svg");
@@ -51,7 +51,7 @@
   background-repeat: no-repeat;
   opacity: .5;
 }
-[inky].spin .touch {
+.inky.spin .touch {
   animation: animationFrames linear .5s;
   animation-iteration-count: infinite;
   -webkit-animation: animationFrames linear .5s;
@@ -63,25 +63,25 @@
   -ms-animation: animationFrames linear .5s;
   -ms-animation-iteration-count: infinite;
 }
-[inky].overflow {
+.inky.overflow {
   overflow: visible;
 }
-[inky][raised], [inky] .raised {
+.inky.raised, .inky .raised {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
-[inky][icon] {
+.inky[icon] {
   padding: 8px;
   border-radius: 100%;
   /*font-size: 35px;*/
   line-height: 0;
 }
-[inky]:focus, [inky] :active {
+.inky:focus, .inky :active {
   -moz-outline-style: none;
 }
-[inky][raised]:active, [inky] .raised:active {
+.inky.raised:active, .inky .raised:active {
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
-[inky][disabled], [inky] .disabled, [inky] [disabled]:active, [inky] .disabled:active {
+.inky[disabled], .inky .disabled, .inky [disabled]:active, .inky .disabled:active {
   background: #eee;
   color: #aaa;
   box-shadow: none !important;

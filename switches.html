@@ -1,0 +1,249 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Media Center</title>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="UTF-8">
+
+        <!-- Bootstrap core CSS -->
+        <link href="content/css/bootstrap.css" rel="stylesheet">
+
+        <!-- Fonts CSS -->
+        <link href="content/font/font-awesome.css" rel="stylesheet">
+        <link href="content/font/font-roboto/font-roboto.css" rel="stylesheet">
+
+        <!-- Material Design CSS-->        
+        <link href="content/css/button.css" rel="stylesheet"> 
+        <link href="content/css/cards.css" rel="stylesheet">
+        <link href="content/css/checkbox.css" rel="stylesheet">
+        <link href="content/css/input.css" rel="stylesheet">
+        <link href="content/css/radiobutton.css" rel="stylesheet">
+        <link href="content/css/selectbox.css" rel="stylesheet">
+        <link href="content/css/sidebar.css" rel="stylesheet">
+        <link href="content/css/switch.css" rel="stylesheet"> 
+        <link href="content/css/tabs.css" rel="stylesheet"> 
+
+        <!-- MEU CSS-->
+        <link href="content/css/style.css" rel="stylesheet">
+        <link href="content/css/uisearch.css" rel="stylesheet">        
+
+        <!-- ZERA ESPAÇAMENTO CSS-->
+        <link href="content/css/zero.css" rel="stylesheet">
+
+        <style>
+            .check {
+                border: 2px solid #333333;
+                -webkit-appearance: none;
+                appearance: none;
+                display: inline-block;
+                height: 1.6rem;
+                width: 1.6rem;
+                position: relative;
+                border-radius: 2px;
+            }
+            .check:before, .check:after {
+                position: absolute;
+                content: "";
+                border-radius: 2px;
+            }
+            .check:before {
+                transform-origin: left top;
+                transform: rotate(55deg);
+                height: .3rem;
+                bottom: .7rem;
+                left: .2rem;
+                width: 0.7rem;
+            }
+            .check:after {
+                transform-origin: left top;
+                transform: rotate(-52deg);
+                height: .3rem;
+                bottom: .1rem;
+                left: .4rem;
+                width: 1.2rem;
+            }
+            .check:checked {
+                background: #4caf50;
+                border: 2px solid #4caf50;
+            }
+            .check:checked:before, .check:checked:after {
+                background: white;
+                height: 3px;
+            }
+            .check:checked:before {
+                animation: checkbox-mask-left .15s ease-in-out;
+            }
+            .check:checked:after {
+                animation: checkbox-mask-right .15s ease-in-out;
+            }
+            .check:focus {
+                outline: 0;
+            }
+
+            .check, label {
+                display: inline-block;
+                vertical-align: middle;
+                font-family: Helvetica, sans-serif;
+                cursor: pointer;
+            }
+
+            @keyframes checkbox-mask-left {
+                0% {
+                    width: 0;
+                }
+
+                50% {
+                    width: 0.7rem;
+                }
+
+                100% {
+                    width: 0.7rem;
+                }
+            }
+            @keyframes checkbox-mask-right {
+                0% {
+                    width: 0;
+                }
+
+                50% {
+                    width: 0;
+                }
+
+                100% {
+                    width: 1.2rem;
+                }
+            }
+        </style>
+    </head>
+    <body id="st-container"> 
+        <nav class="st-menu st-effect-1">
+            <h2 >
+                Material Design + Bootstrap
+            </h2>
+            <ul>
+                <li><a href="Index.html">Index</a></li>
+                <li><a href="button.html">Button</a></li>
+                <li><a href="cards.html">Cards</a></li>                
+                <li><a href="tabs.html">Tabs</a></li>
+                <li><a href="textfields.html">Text fields</a></li>
+                <li><a href="switches.html">Switches</a></li>
+            </ul>
+        </nav>
+        <div class="st-pusher">        
+            <div class="st-content">
+                <div class="st-content-inner">
+                    <div id="st-trigger-effects" class="navbar navbar-fixed-top">
+                        <div class="col-xs-4 col-sm-8 pull-left">
+                            <button data-effect="st-effect-1" class="btn-flat btn-lg pull-left"><i class="fa fa-bars"></i></button>
+                            <div class="title-page text-overflow pull-left hidden-xs col-sm-10">Material Design + Bootstrap</div>
+                        </div>
+                        <div class="col-xs-8 col-sm-4 pull-right">
+                            <div id="sb-search" class="sb-search">
+                                <form>
+                                    <input class="sb-search-input" placeholder="Search" type="text" value="" name="search" id="search">
+                                    <input class="sb-search-submit" type="submit" value="">
+                                    <span class="sb-icon-search"></span>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="header" style="background-image: url('content/images/banner.png');"></div>
+                    <section class="container">  
+                        <div class="card">                                                          
+                            <form role="form" class="form"> 
+                                <div class="form-group">
+                                    <label class="check-effect">
+                                        <input type="checkbox" class="check">
+                                        Item 1
+                                    </label>
+                                    <label class="check-effect">
+                                        <input type="checkbox" class="check">
+                                        Item 2
+                                    </label>
+                                    <label class="check-effect">
+                                        <input type="checkbox" class="check">
+                                        Item 3
+                                    </label>
+                                    <label class="check-effect">
+                                        <input type="checkbox" class="check">
+                                        Item 4
+                                    </label>
+                                </div>
+                                <div class="form-group">
+                                    <label>
+                                        <label class="radio-effect">
+                                            <input id="radio1" type="radio" name="radios" checked>
+                                            <span class="outer">
+                                                <span class="inner"></span>
+                                            </span>
+                                            Item 1
+                                        </label>
+                                        <label class="radio-effect">
+                                            <input id="radio2" type="radio" name="radios">
+                                            <span class="outer">
+                                                <span class="inner"></span>
+                                            </span>
+                                            Item 2
+                                        </label>
+                                        <label class="radio-effect">
+                                            <input id="radio3" type="radio" name="radios">
+                                            <span class="outer">
+                                                <span class="inner"></span>
+                                            </span>
+                                            Item 3
+                                        </label>
+                                        <label class="radio-effect">
+                                            <input id="radio4" type="radio" name="radios">
+                                            <span class="outer">
+                                                <span class="inner"></span>
+                                            </span>
+                                            Item 4
+                                        </label>
+                                        <label class="radio-effect">
+                                            <input id="radio5" type="radio" name="radios">
+                                            <span class="outer">
+                                                <span class="inner"></span>
+                                            </span>
+                                            Item 5
+                                        </label>
+                                    </label>
+                                </div>
+                                <div class="form-group">
+                                    <div>
+                                        <input type="checkbox" id="switch1" name="switch1" class="switch" />
+                                        <label for="switch1">First switch</label>
+                                    </div>
+                                    <div class="clear">&nbsp;</div>
+                                    <div>
+                                        <input type="checkbox" id="switch2" name="switch2" class="switch" />
+                                        <label for="switch2">Second switch</label>
+                                    </div>
+                                </div>
+                            </form> 
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+        <script src="js/jquery.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+
+        <script src="js/modernizr.custom.js"></script>
+        <script src="js/classie.js"></script>
+        <script src="js/uisearch.js"></script>
+        <script src="js/jquery-ui.min.js"></script> 
+
+        <!-- Material Design js-->
+        <script src="js/input-effect.js"></script>
+        <script src="js/navbar-scroll.js"></script>
+        <script src="js/sidebar-effect.js"></script>    
+        <script src="js/button-effect.js"></script>
+        <script src="js/selectbox.js"></script>
+        <script src="js/tabs.js"></script>
+        <script src="js/checkbox.js"></script>
+
+        <script>
+            new UISearch( document.getElementById( 'sb-search' ) );
+        </script>
+    </body>
+</html>

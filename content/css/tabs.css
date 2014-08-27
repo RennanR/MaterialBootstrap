@@ -1,18 +1,18 @@
-.card > .nav-tabs{
+.card .nav-tabs{
     border-bottom: 1px solid #dddddd;
 }
 
-.card > .nav-tabs > li > a{
+.card .nav-tabs > li > a{
     border: none !important;
     border-radius: 0;
     padding: 15px;
     color: #333;
 }
-.card > .nav-tabs > li > a:hover{
-    background-color: #f2f2f2;
+.card .nav-tabs > li > a:hover{
+    background-color: #fff;
 }
 
-.card > .nav-tabs > li.active > a{
+.card .nav-tabs > li.active > a{
     color: #448ccb;
     background-color: #ffffff;
 }
