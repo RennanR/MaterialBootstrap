@@ -20,7 +20,7 @@
     "tests",
     "content",
     "js",
-    "*.html",
+    "*.html"
   ],
   "dependencies": {
     "roboto-fontface": "~0.2.0",
