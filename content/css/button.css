@@ -1,136 +1,136 @@
 .inky {
-  position: relative;
-  display: inline-block;
-  overflow: hidden;
-  border: 0;
-  outline: 0;  
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  -o-user-select: none;
-  user-select: none;
-  -webkit-transition: box-shadow .2s;
-  -moz-transition: box-shadow .2s;
-  -ms-transition: box-shadow .2s;
-  -o-transition: box-shadow .2s;
-  transition: box-shadow .2s;
-  cursor: pointer;
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    border: 0;
+    outline: 0;  
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+    -webkit-transition: box-shadow .2s;
+    -moz-transition: box-shadow .2s;
+    -ms-transition: box-shadow .2s;
+    -o-transition: box-shadow .2s;
+    transition: box-shadow .2s;
+    cursor: pointer;
 }
 .inky .touch {
-  background: rgba(0, 0, 0, 0.1);
-  pointer-events: none;
-  border-radius: 100%;
+    background: rgba(0, 0, 0, 0.1);
+    pointer-events: none;
+    border-radius: 100%;
 }
 .inky.white .touch {
-  background: rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.2);
 }
 .inky.blue .touch {
-  background: rgba(0, 0, 255, 0.2);
+    background: rgba(0, 0, 255, 0.2);
 }
 .inky.red .touch {
-  background: rgba(255, 0, 0, 0.2);
+    background: rgba(255, 0, 0, 0.2);
 }
 .inky.green .touch {
-  background: rgba(0, 255, 0, 0.2);
+    background: rgba(0, 255, 0, 0.2);
 }
 .inky.star .touch {
-  border-radius: 0;
-  background: none;
-  background-image: url("http://img3.wikia.nocookie.net/__cb20140518063015/vocaloid/images/d/de/Star_icon.svg");
-  background-position: center center;
-  background-size: 50% 50%;
-  background-repeat: no-repeat;
-  opacity: .5;
+    border-radius: 0;
+    background: none;
+    background-image: url("http://img3.wikia.nocookie.net/__cb20140518063015/vocaloid/images/d/de/Star_icon.svg");
+    background-position: center center;
+    background-size: 50% 50%;
+    background-repeat: no-repeat;
+    opacity: .5;
 }
 .inky.heart .touch {
-  border-radius: 0;
-  background: none;
-  background-image: url("http://upload.wikimedia.org/wikipedia/commons/4/42/Love_Heart_SVG.svg");
-  background-position: center center;
-  background-size: 50% 50%;
-  background-repeat: no-repeat;
-  opacity: .5;
+    border-radius: 0;
+    background: none;
+    background-image: url("http://upload.wikimedia.org/wikipedia/commons/4/42/Love_Heart_SVG.svg");
+    background-position: center center;
+    background-size: 50% 50%;
+    background-repeat: no-repeat;
+    opacity: .5;
 }
 .inky.spin .touch {
-  animation: animationFrames linear .5s;
-  animation-iteration-count: infinite;
-  -webkit-animation: animationFrames linear .5s;
-  -webkit-animation-iteration-count: infinite;
-  -moz-animation: animationFrames linear .5s;
-  -moz-animation-iteration-count: infinite;
-  -o-animation: animationFrames linear .5s;
-  -o-animation-iteration-count: infinite;
-  -ms-animation: animationFrames linear .5s;
-  -ms-animation-iteration-count: infinite;
+    animation: animationFrames linear .5s;
+    animation-iteration-count: infinite;
+    -webkit-animation: animationFrames linear .5s;
+    -webkit-animation-iteration-count: infinite;
+    -moz-animation: animationFrames linear .5s;
+    -moz-animation-iteration-count: infinite;
+    -o-animation: animationFrames linear .5s;
+    -o-animation-iteration-count: infinite;
+    -ms-animation: animationFrames linear .5s;
+    -ms-animation-iteration-count: infinite;
 }
 .inky.overflow {
-  overflow: visible;
+    overflow: visible;
 }
 .inky.raised, .inky .raised {
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 .inky[icon] {
-  padding: 8px;
-  border-radius: 100%;
-  /*font-size: 35px;*/
-  line-height: 0;
+    padding: 8px;
+    border-radius: 100%;
+    /*font-size: 35px;*/
+    line-height: 0;
 }
 .inky:focus, .inky :active {
-  -moz-outline-style: none;
+    -moz-outline-style: none;
 }
 .inky.raised:active, .inky .raised:active {
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 .inky[disabled], .inky .disabled, .inky [disabled]:active, .inky .disabled:active {
-  background: #eee;
-  color: #aaa;
-  box-shadow: none !important;
+    background: #eee;
+    color: #aaa;
+    box-shadow: none !important;
 }
 
 @keyframes animationFrames {
-  0% {
-    transform: rotate(0deg);
-  }
+    0% {
+        transform: rotate(0deg);
+    }
 
-  100% {
-    transform: rotate(359deg);
-  }
+    100% {
+        transform: rotate(359deg);
+    }
 }
 @-moz-keyframes animationFrames {
-  0% {
-    -moz-transform: rotate(0deg);
-  }
+    0% {
+        -moz-transform: rotate(0deg);
+    }
 
-  100% {
-    -moz-transform: rotate(359deg);
-  }
+    100% {
+        -moz-transform: rotate(359deg);
+    }
 }
 @-webkit-keyframes animationFrames {
-  0% {
-    -webkit-transform: rotate(0deg);
-  }
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
 
-  100% {
-    -webkit-transform: rotate(359deg);
-  }
+    100% {
+        -webkit-transform: rotate(359deg);
+    }
 }
 @-o-keyframes animationFrames {
-  0% {
-    -o-transform: rotate(0deg);
-  }
+    0% {
+        -o-transform: rotate(0deg);
+    }
 
-  100% {
-    -o-transform: rotate(359deg);
-  }
+    100% {
+        -o-transform: rotate(359deg);
+    }
 }
 @-ms-keyframes animationFrames {
-  0% {
-    -ms-transform: rotate(0deg);
-  }
+    0% {
+        -ms-transform: rotate(0deg);
+    }
 
-  100% {
-    -ms-transform: rotate(359deg);
-  }
+    100% {
+        -ms-transform: rotate(359deg);
+    }
 }
 
 /*------------------------------------------------------------------*/
@@ -140,17 +140,17 @@
     padding: 10px 15px;
     margin: 15px;
     text-transform: uppercase;
-    font-family: robotomedium;
+    font-family: Roboto;
+    font-weight: 400;
 }
 
 .btn-circular, .btn-circular-sm {
     border-radius: 50%;
     width: 56px;
     height: 56px;
-    border: none;
-    margin: 15px;
+
     font-size: 20px;
-    font-family: robotomedium;
+
 }
 
 .btn-circular-sm {
@@ -160,15 +160,14 @@
 
 .btn-flat,.btn-flat:hover, .btn-flat:focus {
     color: #333333;
-    border: none;
+
     background: none;
     box-shadow: none;
-    padding: 10px 15px;
-    margin: 15px;
-    text-transform: uppercase;
-    font-family: robotomedium;
+
+
+
 }
 
 .btn-flat.colored, .btn-flat.colored:hover, .btn-flat.colored:focus{
-     color: #ff9800;
+    color: #ff9800;
 }
