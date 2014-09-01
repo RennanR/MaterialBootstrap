@@ -1,0 +1,92 @@
+input[type="checkbox"] {
+    margin: 0 5px 0 0;
+}
+
+.check-effect {
+    position: relative;
+    cursor: pointer;
+    font-weight: normal;
+    margin-right: 20px;
+}
+
+.check {
+    border: 2px solid #333333;
+    -webkit-appearance: none;
+    appearance: none;
+    display: inline-block;
+    height: 1.6rem;
+    width: 1.6rem;
+    position: relative;
+}
+.check:before, .check:after {
+    position: absolute;
+    content: "";
+    border-radius: 2px;
+}
+.check:before {
+    transform-origin: left top;
+    transform: rotate(55deg);
+    height: .3rem;
+    bottom: .7rem;
+    left: .2rem;
+    width: 0.7rem;
+}
+.check:after {
+    transform-origin: left top;
+    transform: rotate(-52deg);
+    height: .3rem;
+    bottom: .1rem;
+    left: .4rem;
+    width: 1.2rem;
+}
+.check:checked {
+    background: #4caf50;
+    border: 2px solid #4caf50;
+}
+.check:checked:before, .check:checked:after {
+    background: white;
+    height: 3px;
+}
+.check:checked:before {
+    animation: checkbox-mask-left .15s ease-in-out;
+}
+.check:checked:after {
+    animation: checkbox-mask-right .15s ease-in-out;
+}
+.check:focus {
+    outline: 0;
+}
+
+.check, label {
+    display: inline-block;
+    vertical-align: middle;
+    font-family: Helvetica, sans-serif;
+    cursor: pointer;
+}
+
+@keyframes checkbox-mask-left {
+    0% {
+        width: 0;
+    }
+
+    50% {
+        width: 0.7rem;
+    }
+
+    100% {
+        width: 0.7rem;
+    }
+}
+@keyframes checkbox-mask-right {
+    0% {
+        width: 0;
+    }
+
+    50% {
+        width: 0;
+    }
+
+    100% {
+        width: 1.2rem;
+    }
+}
