@@ -1,0 +1,42 @@
+.card .nav-tabs{
+    border-bottom: 1px solid #dddddd;
+}
+
+.card .nav-tabs > li > a{
+    border: none !important;
+    border-radius: 0;
+    padding: 15px;
+    color: #333;
+}
+.card .nav-tabs > li > a:hover{
+    background-color: #fff;
+}
+
+.card .nav-tabs > li.active > a{
+    color: #448ccb;
+    background-color: #ffffff;
+}
+
+
+.bar-tab{ 
+    position:relative; 
+    display:block; 
+    width:100%; 
+}
+
+.bar-tab:before{
+  content:'';
+  height:2px; 
+  width: 0;
+  bottom: 0; 
+  position:absolute;
+  background:#448ccb; 
+  transition:0.2s ease all; 
+  -moz-transition:0.2s ease all; 
+  -webkit-transition:0.2s ease all;
+}
+
+.active > .bar-tab:before{
+  width: 100%;
+
+}

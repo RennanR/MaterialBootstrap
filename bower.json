@@ -6,7 +6,7 @@
     "<RennanR <rennan@speedysolutions.com.br>>"
   ],
   "description": "Material Design Bootstrap theme",
-  "main": "index.html",
+  "main": "/dist/css/style.css",
   "keywords": [
     "bootstrap",
     "materialdesign"
@@ -17,7 +17,10 @@
     "node_modules",
     "bower_components",
     "test",
-    "tests"
+    "tests",
+    "content",
+    "js",
+    "*.html",
   ],
   "dependencies": {
     "roboto-fontface": "~0.2.0",

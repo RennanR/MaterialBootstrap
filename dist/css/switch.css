@@ -1,0 +1,58 @@
+.clear {
+    clear: both;
+}
+input.switch:empty {
+    margin-left: -999px;
+}
+input.switch:empty ~ label {
+    position: relative;
+    float: left;
+    line-height: 1.6em;
+    text-indent: 4em;
+    margin: 0.2em 0;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+input.switch:empty ~ label:before, input.switch:empty ~ label:after {
+    position: absolute;
+    display: block;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    content:' ';
+    width: 3em;
+    height: 2px;
+    -webkit-transition: all 100ms ease-in;
+    transition: all 100ms ease-in;      
+    margin: auto;
+}
+input.switch:empty ~ label:before{
+    background-color: #000;  
+}
+
+input.switch:empty ~ label:after {
+    width: 20px;
+    height: 20px;
+    top: 0.1em;
+    bottom: 0.1em;
+    margin-left: 0;
+    border-radius: 50%; 
+    background-color: #ffffff; 
+    border: 2px solid #333333;
+}
+
+input.switch:checked ~ label:before {
+    background-color: #4caf50;
+}
+
+input.switch:checked ~ label:after {
+    background-color: #4caf50;
+    border: 2px solid #4caf50;
+}
+
+input.switch:checked ~ label:after {
+    margin-left: 2em;
+}
