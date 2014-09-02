@@ -2,13 +2,6 @@ input[type="checkbox"] {
     margin: 0 5px 0 0;
 }
 
-.check-effect {
-    position: relative;
-    cursor: pointer;
-    font-weight: normal;
-    margin-right: 20px;
-}
-
 .check {
     border: 2px solid #333333;
     -webkit-appearance: none;
@@ -17,6 +10,7 @@ input[type="checkbox"] {
     height: 1.6rem;
     width: 1.6rem;
     position: relative;
+    border-radius: 2px;
 }
 .check:before, .check:after {
     position: absolute;
