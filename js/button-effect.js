@@ -3,8 +3,8 @@ $(function(){
   $.easing.easeOutQuart = function (x, t, b, c, d) {
 		return -c * ((t=t/d-1)*t*t*t - 1) + b;
   };
-  $('.inky:not([disabled],.disabled)')
-  .on('mousedown', function( e ){
+    $('body')
+  .on('mousedown', '.inky:not([disabled],.disabled)', function (e) {
     
     var button = $(this);
     var touch = $('<div><div/>');
